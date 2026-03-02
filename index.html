@@ -2,375 +2,762 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman Kumar - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aman Kumar — Machine Learning Engineer. Building adaptive AI pipelines, LLM systems, and quantitative models.">
+  <title>Aman Kumar — ML Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome 6) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+
+  <!-- Cursor glow (decorative, desktop only) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">AK<span>.</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"       class="nav-link">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+        <li>
+          <a href="resume/Aman_Kumar_ft.pdf" target="_blank" class="nav-resume-btn">
+            Resume <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#experience" class="menu-btn">Experience</a></li>
-                <li><a href="#projects" class="menu-btn">Projects</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#education" class="menu-btn">Education</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-                <li><a href="#resume" class="menu-btn">Resume</a></li>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Available for opportunities
+      </div>
+
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Aman Kumar</h1>
+
+      <h2 class="hero-role">
+        <span class="typed-text" id="typedText"></span><span class="cursor-blink" aria-hidden="true">|</span>
+      </h2>
+
+      <p class="hero-desc">
+        Building production AI systems, LLM-powered applications, and
+        adaptive ML pipelines. Currently at Sandisk India — open to
+        challenging roles across AI, data, and software engineering.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="resume/Aman_Kumar_ft.pdf" target="_blank" class="btn btn-outline">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/aman-kumar-0863351b4/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/aman-24052001" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.kaggle.com/amankumar24052001" target="_blank" aria-label="Kaggle">
+          <i class="fab fa-kaggle"></i>
+        </a>
+        <a href="https://leetcode.com/u/aman_24052001/" target="_blank" aria-label="LeetCode">
+          <i class="fas fa-code"></i>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-image-frame">
+            <img src="images/img-aman.jpeg" alt="Aman Kumar">
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <p class="about-bio">
+            Machine Learning Engineer with hands-on experience building adaptive AI pipelines,
+            LLM-based agent systems, and production MLOps infrastructure.
+          </p>
+          <p class="about-bio">
+            I enjoy working across the stack — from designing and training models to deploying
+            and monitoring them in production. Comfortable diving deep into research problems
+            or shipping robust, scalable systems. I build things that work and can be explained
+            clearly.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-location-dot"></i>
+              <span>Bengaluru, Karnataka, India</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:amankumar24052001@gmail.com">amankumar24052001@gmail.com</a>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>MTech Integrated Data Science — VIT Vellore · CGPA 8.1</span>
+            </div>
+          </div>
+
+          <a href="resume/Aman_Kumar_ft.pdf" target="_blank" class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Career</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Sandisk MLE (Current) -->
+        <div class="timeline-item reveal">
+          <div class="timeline-line-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-left">
+                <h3 class="timeline-company">
+                  <a href="https://www.westerndigital.com/en-in" target="_blank">
+                    Sandisk India
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </h3>
+                <p class="timeline-role">Machine Learning Engineer</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">Sept 2025 — Present</span>
+                <span class="badge-current">Current</span>
+              </div>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Enhanced multi-corner timing predictions for the <strong>SWIFTECO framework</strong>: MAE 8 ps (0.008), 20% over-estimation, under-estimation ≤0.005 units</li>
+              <li>Reduced timing analysis turnaround from over a day to <strong>47 minutes</strong>, accelerating ECO validation cycles and throughput</li>
+              <li>Processed large PrimeTime reports (<strong>10+ GB/rpt</strong>) with scalable pipelines for parsing, feature extraction, and automated validation</li>
+              <li>Designed <strong>Stream IP and RTL Lint Agents</strong> enabling natural-language queries and automated RTL cleanup, reducing manual intervention</li>
             </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+          </div>
         </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-        <div class="container">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Aman Kumar</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#contact">Get in Touch</a>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/2405a.man/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/aman-kumar-0863351b4/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/aman-24052001" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.kaggle.com/amankumar24052001" target="_blank"><i class="fab fa-kaggle"></i></a>
-                    <a href="https://leetcode.com/u/aman_24052001/" target="_blank"><i class="fas fa-code"></i></a>
-                </div>
+        <!-- Hyperbots -->
+        <div class="timeline-item reveal">
+          <div class="timeline-line-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-left">
+                <h3 class="timeline-company">
+                  <a href="https://www.hyperbots.com/" target="_blank">
+                    Hyperbots
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </h3>
+                <p class="timeline-role">Applied ML Engineer</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">Jun 2025 — Sept 2025</span>
+              </div>
             </div>
+            <ul class="timeline-bullets">
+              <li>Productionized <strong>MLOps pipelines</strong> across AWS/GCP with Docker &amp; Jenkins, ensuring reliable deployment of ML and LLM-based agent systems</li>
+              <li>Built intelligent document processing pipeline (Gradio + OCR + HIL) for <strong>RAG-style retrieval</strong> and annotation workflows, reducing manual validation</li>
+              <li>Implemented <strong>Slack-integrated ML feedback loop</strong> improving invoice conflict detection and enabling real-time adaptive predictions</li>
+              <li>Developed real-time monitoring dashboards in <strong>React</strong> for pipeline health, model performance, and workflow accountability</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/background.jpg" alt="Aman's Profile Picture">
-                </div>
-                <div class="about-text">
-                    <h3>I'm Aman and I'm a <span class="typing-2"></span></h3>
-                    <p>As a final-year Computer Science student at VIT Vellore, specializing in Data Science, I'm driven by a passion for uncovering insights at the intersection of technology and data. Eager to contribute to the fields of Generative AI, MLOps, and data analysis, I'm actively seeking a fresher role where I can apply my skills, grow through hands-on experience, and make a meaningful impact in the world of AI and data-driven solutions.</p>
-                    <p>Let's connect to explore possibilities of collaboration and growth!</p>
-                    <div class="cta-buttons">
-                        <a href="resume/resume.pdf" class="btn btn-primary" target="_blank">Download CV</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
+        <!-- Western Digital Intern -->
+        <div class="timeline-item reveal">
+          <div class="timeline-line-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-left">
+                <h3 class="timeline-company">
+                  <a href="https://www.westerndigital.com/en-in" target="_blank">
+                    Western Digital (Sandisk India)
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </h3>
+                <p class="timeline-role">AI-ML Intern</p>
+              </div>
+              <div class="timeline-right">
+                <span class="timeline-date">Sep 2024 — Jun 2025</span>
+              </div>
             </div>
+            <ul class="timeline-bullets">
+              <li><strong>55% improvement</strong> in STA timing consistency using optimization-driven ML models, reducing design iteration cycles</li>
+              <li>Automated IR drop and PrimeTime report analysis in Python, strengthening verification reliability</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-organization"></i>
-                    </div>
-                    <div class="experience-content">
-                        <h3>Western Digital(Sandisk), Bengaluru</h3>
-                        <p class="experience-role">AI-ML Intern  -ON SITE</p>
-                        <p class="experience-date">Sep. 2024 – June 2025</p>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Work</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <!-- ── Featured: Macro Regime ── -->
+      <div class="featured-project reveal">
+        <div class="featured-visual" aria-hidden="true">
+          <div class="chart-decoration">
+            <div class="chart-labels">
+              <span class="chart-metric green"><i class="fas fa-arrow-trend-up"></i> Sharpe 0.937</span>
+              <span class="chart-metric yellow"><i class="fas fa-shield-halved"></i> GFC +3.4%</span>
+              <span class="chart-metric red"><i class="fas fa-arrow-trend-down"></i> Max DD −21%</span>
             </div>
-        </div>
-    </section>
-
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a href="https://github.com/aman-24052001/Talk-to-DB" target="_blank">
-                        <div class="project-image">
-                            <img src="images/project1.jpg" alt="Talk to DB">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">TALK to DB (Database) APP</h3>
-                            <p class="project-description">Create a conversational interface with the Database (DB) App using technologies such as Streamlit, Large Language Models (LLMs), langchain, SQL, and Google Palm.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <a href="https://drive.google.com/file/d/1idwhzo1H1HibHODbn0r1XNN923Kpf5xG/view" target="_blank">
-                        <div class="project-image">
-                            <img src="images/project2.jpeg" alt="Fake News Detection">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">FAKE NEWS DETECTION SYSTEM</h3>
-                            <p class="project-description">Developed a robust Fake News Detection system using ML algorithms like Logistic Regression, Decision Trees, Gradient Boosting, and Random Forest.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <a href="https://github.com/aman-24052001/Know-Your-Website" target="_blank">
-                        <div class="project-image">
-                            <img src="images/project3.png" alt="Know Your Website">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">KNOW YOUR WEBSITE</h3>
-                            <p class="project-description">Developed a web-based application for detecting potential threats in web requests. Leveraging machine learning models.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <a href="https://public.tableau.com/app/profile/aman.kumar7433/viz/shared/Z8Q7SK2GY" target="_blank">
-                        <div class="project-image">
-                            <img src="images/project4.jpg" alt="COVID-19 Dashboard">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">COVID-19 AUTOMATED DASHBOARD</h3>
-                            <p class="project-description">Created a pipeline for converting real-time COVID-19 data reporting to KPIs and interactive visualizations.</p>
-                        </div>
-                    </a>
-                </div>
-                
-                 <div class="project-card">
-                    <a href="https://aman-24052001.github.io/snake-master-game/" target="_blank">
-                        <div class="project-image">
-                            <img src="images/snake.webp" alt="Snake Game">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">SNAKE MASTER</h3>
-                            <p class="project-description">An advanced implementation of the classic Snake game with modern features and responsive design. Built using vanilla HTML5, CSS3, and JavaScript.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://github.com/aman-24052001/market-analysis-wizard" target="_blank">
-                        <div class="project-image">
-                            <img src="images/market_wizard.webp" alt="Market Analysis Wizard">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">MARKET ANALYSIS WIZARD</h3>
-                            <p class="project-description">A market research tool that uses Gemini AI and SerpAPI to produce comprehensive, premium reports with dynamic visualizations and refined SWOT tables, clearly segmenting market insights, target audience, resource needs, and optimal locations.
-</p>
-                        </div>
-                    </a>
-                </div>
-                
+            <svg class="equity-curve" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,140 C20,130 35,120 50,108 C65,96 75,105 90,92 C105,79 115,84 130,68 C145,52 155,60 170,44 C185,28 195,34 210,22 C225,10 235,18 250,12 C265,6 275,14 290,8 C305,2 315,10 330,4 C345,-2 355,6 370,2 C385,-2 395,4 400,2"
+                    fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M0,140 C20,130 35,120 50,108 C65,96 75,105 90,92 C105,79 115,84 130,68 C145,52 155,60 170,44 C185,28 195,34 210,22 C225,10 235,18 250,12 C265,6 275,14 290,8 C305,2 315,10 330,4 C345,-2 355,6 370,2 C385,-2 395,4 400,2 L400,160 L0,160 Z"
+                    fill="url(#curveGrad)"/>
+              <!-- SPY comparison (dashed, underperforms) -->
+              <path d="M0,140 C30,128 60,132 90,124 C120,116 140,125 170,108 C200,91 220,100 250,88 C280,76 310,82 340,70 C365,60 385,65 400,55"
+                    fill="none" stroke="#9494a8" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+            </svg>
+            <div class="chart-legend">
+              <span class="legend-strategy">— Strategy</span>
+              <span class="legend-spy">- - SPY</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-content">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Languages</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>Python</li>
-                        <li><span class="rhombus"></span>Java</li>
-                        <li><span class="rhombus"></span>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>NLP & AI</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>NLP Techniques</li>
-                        <li><span class="rhombus"></span>NLTK</li>
-                        <li><span class="rhombus"></span>Hugging Face</li>
-                        <li><span class="rhombus"></span>Generative AI</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data Analysis</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>Pandas</li>
-                        <li><span class="rhombus"></span>NumPy</li>
-                        <li><span class="rhombus"></span>Matplotlib</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Machine Learning</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>TensorFlow</li>
-                        <li><span class="rhombus"></span>Keras</li>
-                        <li><span class="rhombus"></span>scikit-learn</li>
-                        <li><span class="rhombus"></span>PyTorch</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>Power BI</li>
-                        <li><span class="rhombus"></span>MS Excel</li>
-                        <li><span class="rhombus"></span>Git</li>
-                        <li><span class="rhombus"></span>Figma</li>
-                        <li><span class="rhombus"></span>Jupyter Notebook</li>
-                        <li><span class="rhombus"></span>PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Web Technologies</h3>
-                    <ul class="skill-list">
-                        <li><span class="rhombus"></span>HTML</li>
-                        <li><span class="rhombus"></span>CSS</li>
-                        <li><span class="rhombus"></span>JavaScript</li>
-                        <li><span class="rhombus"></span>React.js</li>
-                        <li><span class="rhombus"></span>Streamlit</li>
-                    </ul>
-                </div>
+        <div class="featured-content">
+          <span class="featured-label">Featured Project</span>
+          <h3 class="featured-title">Adaptive Macro Regime Detection &amp; ETF Rotation</h3>
+          <p class="featured-desc">
+            3-state Gaussian HMM trained on 12 FRED macro series — yield curve, credit spreads,
+            CPI, unemployment — to detect Expansion / Stagnation / Contraction regimes and
+            dynamically rotate a 6-asset ETF portfolio (SPY / TLT / GLD / LQD / HYG / BIL).
+            241-month walk-forward OOS backtest with zero look-ahead bias.
+          </p>
+
+          <div class="metric-row">
+            <div class="metric-chip">
+              <span class="metric-val green">0.937</span>
+              <span class="metric-lbl">Sharpe (SPY: 0.760)</span>
             </div>
-        </div>
-    </section>
-
-
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Vellore Institute of Technology, Vellore</h3>
-                        <p class="education-degree">MTech Integrated Data Science</p>
-                        <p class="education-date">Sep. 2020 – July 2025</p>
-                        <p class="education-gpa">CGPA: 8.0</p>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Army Public School,Ranchi</h3>
-                        <p class="education-degree">CBSE XII</p>
-                        <p class="education-date">Completed in 2020</p>
-                        <p class="education-%">Percentage: 93.8%</p>
-                    </div>
-                </div>
+            <div class="metric-chip">
+              <span class="metric-val green">+3.4%</span>
+              <span class="metric-lbl">2008 GFC (SPY: −46%)</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications" id="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-content">
-                <div class="cert-box">
-                    <div class="text">Artificial Intelligence Analyst - IBM</div>
-                    <a href="https://courses.ibmcep.cognitiveclass.ai/certificates/e4f4b41fb94a4e80b1b16e7733742b2a" target="_blank" class="btn-cert">View Certificate</a>
-                </div>
-                <div class="cert-box">
-                    <div class="text">Data Science - British Airways</div>
-                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/British%20Airways/NjynCWzGSaWXQCxSX_British%20Airways_8xwiWhsez2EMGWnbg_1707250774163_completion_certificate.pdf" target="_blank" class="btn-cert">View Certificate</a>
-                </div>
-                <div class="cert-box">
-                    <div class="text">Introduction to Generative AI - Google</div>
-                    <a href="https://www.cloudskillsboost.google/public_profiles/8ba4b437-e5cf-4914-a4e1-5da2c695dd45/badges/8726612?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" class="btn-cert">View Certificate</a>
-                </div>
-                <div class="cert-box">
-                    <div class="text">Statistics - LinkedIn (Basics, Probability, Using datasets)</div>
-                    <a href="https://www.linkedin.com/learning/certificates/a21334d3d28617ea06e3f2023d90e0067bfb859c0290a2ff71a296dc31bf0807" target="_blank" class="btn-cert">View Certificate</a>
-                </div>
+            <div class="metric-chip">
+              <span class="metric-val yellow">−21%</span>
+              <span class="metric-lbl">Max DD (SPY: −50.8%)</span>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>If you would like to collaborate, discuss a project, or just say hi, feel free to reach out to me.</p>
-                    <ul class="contact-details">
-                        <li>
-                            <i class="fas fa-user"></i>
-                            <div>
-                                <h4>Name</h4>
-                                <p>Aman Kumar</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Bengaluru, Karnataka, India</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>amankumar24052001@gmail.com</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 9065939752</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">hmmlearn</span>
+            <span class="tag">FRED API</span>
+            <span class="tag">Walk-Forward HMM</span>
+            <span class="tag">GARCH</span>
+            <span class="tag">Quantitative Finance</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://aman-24052001.github.io/macro-regime/" target="_blank" class="btn btn-primary btn-sm">
+              <i class="fas fa-chart-line"></i> Live Dashboard
+            </a>
+            <a href="https://github.com/aman-24052001" target="_blank" class="btn btn-outline btn-sm">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Project Grid ── -->
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/project1.jpg" alt="Talk to DB">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Talk to DB</h3>
+            <p class="project-desc">Natural language querying over relational databases using LLM + LangChain pipelines. Schema-aware prompting with validation and adaptive feedback loops.</p>
+            <div class="tech-tags">
+              <span class="tag">Streamlit</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">RAG</span>
+              <span class="tag">SQL</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section class="resume" id="resume">
-        <div class="container">
-            <h2 class="section-title">My Resume</h2>
-            <div class="resume-content">
-                <embed src="resume/Aman__Kumar__resume.pdf" type="application/pdf" width="100%" height="600px" />
+            <div class="project-links">
+              <a href="https://github.com/aman-24052001/Talk-to-DB" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <span>Created By Aman Kumar | &copy; 2025 All rights reserved.</span>
-    </footer>
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/market_wizard.webp" alt="Market Analysis Wizard">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Market Analysis Wizard</h3>
+            <p class="project-desc">AI-powered market research using Gemini and SerpAPI to generate comprehensive reports with dynamic visualizations and SWOT analysis.</p>
+            <div class="tech-tags">
+              <span class="tag">Gemini AI</span>
+              <span class="tag">SerpAPI</span>
+              <span class="tag">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/aman-24052001/market-analysis-wizard" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/project4.jpg" alt="COVID-19 Dashboard">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">COVID-19 Automated Dashboard</h3>
+            <p class="project-desc">Real-time data pipeline converting COVID-19 datasets to KPIs and interactive Tableau visualizations for executive reporting.</p>
+            <div class="tech-tags">
+              <span class="tag">Tableau</span>
+              <span class="tag">Data Pipeline</span>
+              <span class="tag">KPIs</span>
+            </div>
+            <div class="project-links">
+              <a href="https://public.tableau.com/app/profile/aman.kumar7433/viz/shared/Z8Q7SK2GY" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fas fa-arrow-up-right-from-square"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/project2.jpeg" alt="Fake News Detection">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Fake News Detection</h3>
+            <p class="project-desc">Robust detection system using ML ensembles — Logistic Regression, Decision Trees, Gradient Boosting, and Random Forest — with comparative evaluation.</p>
+            <div class="tech-tags">
+              <span class="tag">scikit-learn</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Ensemble ML</span>
+            </div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1idwhzo1H1HibHODbn0r1XNN923Kpf5xG/view" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fas fa-file-alt"></i> Report
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/project3.png" alt="Know Your Website">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Know Your Website</h3>
+            <p class="project-desc">Web threat detection application — classifies web requests using ML models trained on network traffic features to flag malicious patterns.</p>
+            <div class="tech-tags">
+              <span class="tag">ML</span>
+              <span class="tag">Security</span>
+              <span class="tag">Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/aman-24052001/Know-Your-Website" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="images/snake.webp" alt="Snake Master">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Snake Master</h3>
+            <p class="project-desc">Advanced Snake game with modern mechanics, progressive difficulty, and responsive design. Built with vanilla HTML5 Canvas — no frameworks.</p>
+            <div class="tech-tags">
+              <span class="tag">HTML5 Canvas</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="https://aman-24052001.github.io/snake-master-game/" target="_blank" class="btn btn-outline btn-sm">
+                <i class="fas fa-gamepad"></i> Play
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="skills" id="skills">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-code"></i></span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Java</span>
+            <span class="chip">Tcl</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-brain"></i></span>
+            <h3>ML / AI Frameworks</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Keras</span>
+            <span class="chip">scikit-learn</span>
+            <span class="chip">PyTorch</span>
+            <span class="chip">Hugging Face</span>
+            <span class="chip">LangChain</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-robot"></i></span>
+            <h3>Generative &amp; Adaptive AI</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">LLMs</span>
+            <span class="chip">RAG</span>
+            <span class="chip">NLP</span>
+            <span class="chip">ChromaDB</span>
+            <span class="chip">Pinecone</span>
+            <span class="chip">FinBERT</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-cloud"></i></span>
+            <h3>MLOps &amp; Cloud</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Jenkins</span>
+            <span class="chip">AWS</span>
+            <span class="chip">GCP</span>
+            <span class="chip">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-server"></i></span>
+            <h3>Backend &amp; APIs</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">FastAPI</span>
+            <span class="chip">Flask</span>
+            <span class="chip">React.js</span>
+            <span class="chip">Streamlit</span>
+            <span class="chip">Gradio</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-chart-line"></i></span>
+            <h3>Data &amp; Analytics</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Plotly</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">A/B Testing</span>
+            <span class="chip">EDA</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <span class="skill-icon"><i class="fas fa-screwdriver-wrench"></i></span>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-chips">
+            <span class="chip">Git</span>
+            <span class="chip">Linux</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Jupyter</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION + CERTS ═══════════════════════════ -->
+  <section class="education" id="education">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="edu-grid">
+
+        <!-- MTech — featured card -->
+        <div class="edu-card edu-card--featured reveal">
+          <div class="edu-icon edu-icon--accent">
+            <i class="fas fa-building-columns"></i>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header-row">
+              <h3>Vellore Institute of Technology, Vellore</h3>
+              <span class="edu-badge">5-Year Integrated</span>
+            </div>
+            <p class="edu-degree">MTech Integrated Data Science</p>
+            <p class="edu-meta">Sep 2020 – Jul 2025 &nbsp;·&nbsp; CGPA: 8.1 / 10</p>
+            <div class="edu-courses">
+              <span class="course-chip">Machine Learning</span>
+              <span class="course-chip">Deep Learning</span>
+              <span class="course-chip">NLP</span>
+              <span class="course-chip">Statistical Modelling</span>
+              <span class="course-chip">Big Data</span>
+              <span class="course-chip">Data Structures</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="edu-body">
+            <h3>Army Public School, Ranchi</h3>
+            <p class="edu-degree">CBSE XII</p>
+            <p class="edu-meta">Completed 2020 &nbsp;·&nbsp; 93.8%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-header reveal" style="margin-top: 72px;">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title">Achievements</h2>
+      </div>
+
+      <div class="cert-grid">
+        <a href="https://courses.ibmcep.cognitiveclass.ai/certificates/e4f4b41fb94a4e80b1b16e7733742b2a" target="_blank" class="cert-card reveal">
+          <i class="fas fa-certificate cert-icon"></i>
+          <div class="cert-body">
+            <p class="cert-name">Artificial Intelligence Analyst</p>
+            <p class="cert-issuer">IBM</p>
+          </div>
+          <i class="fas fa-arrow-up-right-from-square cert-ext"></i>
+        </a>
+
+        <a href="https://www.cloudskillsboost.google/public_profiles/8ba4b437-e5cf-4914-a4e1-5da2c695dd45/badges/8726612" target="_blank" class="cert-card reveal">
+          <i class="fas fa-certificate cert-icon"></i>
+          <div class="cert-body">
+            <p class="cert-name">Introduction to Generative AI</p>
+            <p class="cert-issuer">Google</p>
+          </div>
+          <i class="fas fa-arrow-up-right-from-square cert-ext"></i>
+        </a>
+
+        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/British%20Airways/NjynCWzGSaWXQCxSX_British%20Airways_8xwiWhsez2EMGWnbg_1707250774163_completion_certificate.pdf" target="_blank" class="cert-card reveal">
+          <i class="fas fa-certificate cert-icon"></i>
+          <div class="cert-body">
+            <p class="cert-name">Data Science Virtual Experience</p>
+            <p class="cert-issuer">British Airways · Forage</p>
+          </div>
+          <i class="fas fa-arrow-up-right-from-square cert-ext"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/learning/certificates/a21334d3d28617ea06e3f2023d90e0067bfb859c0290a2ff71a296dc31bf0807" target="_blank" class="cert-card reveal">
+          <i class="fas fa-certificate cert-icon"></i>
+          <div class="cert-body">
+            <p class="cert-name">Statistics (Basics, Probability &amp; Datasets)</p>
+            <p class="cert-issuer">LinkedIn Learning</p>
+          </div>
+          <i class="fas fa-arrow-up-right-from-square cert-ext"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+
+      <div class="contact-content reveal">
+        <p class="contact-desc">
+          Open to discussing ML engineering roles, quant research positions,
+          or interesting collaborations. Drop me a message — I read every email.
+        </p>
+
+        <a href="mailto:amankumar24052001@gmail.com" class="contact-email-btn">
+          <i class="fas fa-envelope"></i>
+          amankumar24052001@gmail.com
+        </a>
+
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/aman-kumar-0863351b4/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/aman-24052001" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.kaggle.com/amankumar24052001" target="_blank" aria-label="Kaggle">
+            <i class="fab fa-kaggle"></i>
+          </a>
+          <a href="https://leetcode.com/u/aman_24052001/" target="_blank" aria-label="LeetCode">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+
+        <div class="contact-meta">
+          <span><i class="fas fa-phone"></i> +91 9065939752</span>
+          <span class="contact-divider" aria-hidden="true">·</span>
+          <span><i class="fas fa-location-dot"></i> Bengaluru, Karnataka, India</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ RESUME EMBED ═══════════════════════════ -->
+  <section class="resume-section" id="resume">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Document</span>
+        <h2 class="section-title">Resume</h2>
+      </div>
+      <div class="resume-embed reveal">
+        <embed src="resume/Aman_Kumar_ft.pdf" type="application/pdf" width="100%" height="720px">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">AK<span>.</span></span>
+        <p class="footer-copy">Designed &amp; Built by Aman Kumar &nbsp;·&nbsp; © 2025</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/aman-kumar-0863351b4/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/aman-24052001" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-up button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
