@@ -318,7 +318,7 @@
             <a href="https://aman-24052001.github.io/macro-regime/" target="_blank" class="btn btn-solid btn-sm">
               <i class="fas fa-chart-line"></i> LIVE DASHBOARD
             </a>
-            <a href="https://github.com/aman-24052001" target="_blank" class="btn btn-ghost btn-sm">
+            <a href="https://github.com/aman-24052001/macro-regime" target="_blank" class="btn btn-ghost btn-sm">
               <i class="fab fa-github"></i> CODE
             </a>
           </div>
@@ -334,13 +334,15 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Talk to DB</h3>
-            <p class="project-desc">Self-serve analytics — plain-English querying over relational databases. Schema-aware LLM query generation with integrity checks and adaptive feedback.</p>
+            <p class="project-desc">Natural language to SQL — production-grade agentic service with dual-layer security: sqlglot AST firewall blocks non-SELECT statements + enforced read-only DB sessions at driver level. Zero LangChain dependency.</p>
             <div class="tag-row">
-              <span class="tag">LangChain</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Streamlit</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Anthropic SDK</span>
+              <span class="tag">sqlglot</span>
+              <span class="tag">SQLAlchemy</span>
             </div>
             <div class="project-links">
+              <a href="https://aman-24052001.github.io/Talk-to-DB/" target="_blank" class="btn btn-solid btn-sm"><i class="fas fa-play"></i> DEMO</a>
               <a href="https://github.com/aman-24052001/Talk-to-DB" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> CODE</a>
             </div>
           </div>
@@ -352,11 +354,12 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Market Analysis Wizard</h3>
-            <p class="project-desc">AI-powered market research using Gemini and SerpAPI — generates full reports with dynamic visualizations and SWOT analysis.</p>
+            <p class="project-desc">Multi-agent market research pipeline — LangGraph DAG with parallel Competitor Intel + Market Sizing nodes, SSE streaming, and Tavily web search. Generates structured SWOT reports in real time.</p>
             <div class="tag-row">
-              <span class="tag">Gemini AI</span>
-              <span class="tag">SerpAPI</span>
-              <span class="tag">Python</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Tavily</span>
+              <span class="tag">Claude</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/aman-24052001/market-analysis-wizard" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> CODE</a>
@@ -404,13 +407,15 @@
           </div>
           <div class="project-body">
             <h3 class="project-title">Know Your Website</h3>
-            <p class="project-desc">Web threat detection — classifies web requests using ML models trained on network traffic features to flag malicious patterns.</p>
+            <p class="project-desc">Web threat detection rebuilt with a production stack — FastAPI backend, React frontend, ML classifier on network traffic features to flag malicious request patterns in real time.</p>
             <div class="tag-row">
-              <span class="tag">ML</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">scikit-learn</span>
               <span class="tag">Security</span>
-              <span class="tag">Flask</span>
             </div>
             <div class="project-links">
+              <a href="https://aman-24052001.github.io/Know-Your-Website/" target="_blank" class="btn btn-solid btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> LIVE</a>
               <a href="https://github.com/aman-24052001/Know-Your-Website" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> CODE</a>
             </div>
           </div>
@@ -434,6 +439,59 @@
         </article>
 
       </div>
+
+      <!-- Show More toggle -->
+      <div style="text-align:center;margin-top:2rem;">
+        <button id="showMoreBtn" onclick="toggleMoreProjects()" class="btn btn-ghost" style="font-size:0.85rem;letter-spacing:0.08em;">
+          SHOW MORE PROJECTS <i class="fas fa-chevron-down" id="showMoreIcon"></i>
+        </button>
+      </div>
+
+      <!-- Hidden projects -->
+      <div id="moreProjects" style="display:none;">
+        <div class="projects-grid" style="margin-top:2rem;">
+
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="images/project1.jpg" alt="AmanERP" onerror="this.outerHTML='<div class=img-fallback>AmanERP</div>'">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AmanERP</h3>
+              <p class="project-desc">Mobile-first ERP with full CRUD across Inventory, Sales, HR, and Finance modules. localStorage JSON persistence, AI insights panel via Claude API. Industrial-terminal aesthetic.</p>
+              <div class="tag-row">
+                <span class="tag">React</span>
+                <span class="tag">localStorage</span>
+                <span class="tag">Anthropic API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://aman-24052001.github.io/myERP/" target="_blank" class="btn btn-solid btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> LIVE</a>
+                <a href="https://github.com/aman-24052001/myERP" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> CODE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="images/project1.jpg" alt="Anushree Vastralaya" onerror="this.outerHTML='<div class=img-fallback>Anushree Vastralaya</div>'">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Anushree Vastralaya</h3>
+              <p class="project-desc">Digital khata app for a saree shop — tracks credit sales, partial payments, and customers. Offline-first with IndexedDB, camera capture, 6-month dashboard, Hindi/English toggle. Zero backend.</p>
+              <div class="tag-row">
+                <span class="tag">IndexedDB</span>
+                <span class="tag">PWA</span>
+                <span class="tag">Vanilla JS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://aman-24052001.github.io/anushree-vastralaya/" target="_blank" class="btn btn-solid btn-sm"><i class="fas fa-arrow-up-right-from-square"></i> LIVE</a>
+                <a href="https://github.com/aman-24052001/anushree-vastralaya" target="_blank" class="btn btn-ghost btn-sm"><i class="fab fa-github"></i> CODE</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -620,6 +678,22 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script>
+    function toggleMoreProjects() {
+      var el = document.getElementById('moreProjects');
+      var icon = document.getElementById('showMoreIcon');
+      var btn = document.getElementById('showMoreBtn');
+      if (el.style.display === 'none') {
+        el.style.display = 'block';
+        icon.className = 'fas fa-chevron-up';
+        btn.innerHTML = 'SHOW FEWER PROJECTS <i class="fas fa-chevron-up" id="showMoreIcon"></i>';
+      } else {
+        el.style.display = 'none';
+        icon.className = 'fas fa-chevron-down';
+        btn.innerHTML = 'SHOW MORE PROJECTS <i class="fas fa-chevron-down" id="showMoreIcon"></i>';
+      }
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 
